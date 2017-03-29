@@ -7,6 +7,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.Configuration;
+using System.Net.Http;
+using System.ComponentModel.DataAnnotations;
+using System.IO;
+using System.Collections.ObjectModel;
 
 namespace DeployDemo
 {
@@ -16,22 +22,50 @@ namespace DeployDemo
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        ///
+        /// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        ///
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddConsole();
+             //LoggerFactory.AddConsole(Configuration.GetSection("Logging"));
+             //LoggerFactory.AddDebug();
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+             if(env.IsDevelopment())
+             {
+                 app.UseDeveloperExceptionPage();
+                // app.UseDatabaseErrorPage();
+                // app.UseBrowserLink();
+             }
+             else
+             {
+                 app.UseExceptionHandler("/Home/Error");
+             }
 
-            app.Run(async (context) =>
+             //app.UseStaticFiles();
+
+             //app.UseIdentity();
+
+            //  app.UseMvc(routes =>
+            //  {
+            //      routes.MapRoute(
+            //          name: "default",
+            //          template: ""
+            //      );
+            //  });
+
+            //  app.Run(async (context, next) =>
+            //  {
+            //      await next.Invoke();
+            //  });
+
+             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello CodeMan!");
             });
-        }
+
+        } 
     }
 }

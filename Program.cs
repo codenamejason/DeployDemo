@@ -17,7 +17,8 @@ namespace DeployDemo
                 .UseIISIntegration()
                 .UseStartup<Startup>()
                 .Build();
-
+            
+            // Start the host
             host.Run();
         }
     }

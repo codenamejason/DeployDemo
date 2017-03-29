@@ -1,0 +1,8 @@
+d:\jason\Source\Repos\DeployDemo\bin\Debug\netcoreapp1.1\DeployDemo.deps.json
+d:\jason\Source\Repos\DeployDemo\bin\Debug\netcoreapp1.1\DeployDemo.runtimeconfig.json
+d:\jason\Source\Repos\DeployDemo\bin\Debug\netcoreapp1.1\DeployDemo.runtimeconfig.dev.json
+d:\jason\Source\Repos\DeployDemo\bin\Debug\netcoreapp1.1\DeployDemo.dll
+d:\jason\Source\Repos\DeployDemo\bin\Debug\netcoreapp1.1\DeployDemo.pdb
+d:\jason\Source\Repos\DeployDemo\obj\Debug\netcoreapp1.1\DeployDemo.AssemblyInfo.cs
+d:\jason\Source\Repos\DeployDemo\obj\Debug\netcoreapp1.1\DeployDemo.dll
+d:\jason\Source\Repos\DeployDemo\obj\Debug\netcoreapp1.1\DeployDemo.pdb
